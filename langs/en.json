@@ -1,0 +1,33 @@
+{
+    "settings": {
+        "title" : "Settings",
+        "tabs": {
+            "general": {
+                "tab": "General"
+            },
+            "display": {
+                "tab": "Display",
+                "title": "Display",
+                "light": "Light",
+                "dark": "Dark",
+                "auto": "Automatic",
+                "auto_desc": "Selected based on your PC settings.",
+                "apply": "Apply",
+                "applied": "Applied",
+                "warn": "At the moment changing theme trough settings is not avaiable. I'm sorry."
+            },
+            "lang": {
+                "tab": "Language",
+                "title": "Language",
+                "desc": "Some strings may not be translated yet.",
+                "contribution": {
+                    "title": "Contribute",
+                    "desc": "You can contribute to the translation of the website on:"
+                }
+            },
+            "info": {
+                "tab": "About"
+            }
+        }
+    }
+}
