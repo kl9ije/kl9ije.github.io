@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gocciola - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="res/styles.css">
+
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="gocciolabtw" data-description="Support me on Buy me a coffee!" data-message="" data-color="#7480ff" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</head>
+
+
+
+<body>
+    <div class="navbar bg-base-100 fixed">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li onclick="settings.showModal()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M433-80q-27 0-46.5-18T363-142l-9-66q-13-5-24.5-12T307-235l-62 26q-25 11-50 2t-39-32l-47-82q-14-23-8-49t27-43l53-40q-1-7-1-13.5v-27q0-6.5 1-13.5l-53-40q-21-17-27-43t8-49l47-82q14-23 39-32t50 2l62 26q11-8 23-15t24-12l9-66q4-26 23.5-44t46.5-18h94q27 0 46.5 18t23.5 44l9 66q13 5 24.5 12t22.5 15l62-26q25-11 50-2t39 32l47 82q14 23 8 49t-27 43l-53 40q1 7 1 13.5v27q0 6.5-2 13.5l53 40q21 17 27 43t-8 49l-48 82q-14 23-39 32t-50-2l-60-26q-11 8-23 15t-24 12l-9 66q-4 26-23.5 44T527-80h-94Zm7-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>Impostazioni</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost text-xl" style="font-size: x-large; font-weight: 800; font-family: 'outfit', serif;">gocciola</a>
+      </div>
+      <div class="navbar-end">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#a6adbb"><path d="M263.79-192Q234-192 213-213.21t-21-51Q192-294 213.21-315t51-21Q294-336 315-314.79t21 51Q336-234 314.79-213t-51 21Zm216 0Q450-192 429-213.21t-21-51Q408-294 429.21-315t51-21Q510-336 531-314.79t21 51Q552-234 530.79-213t-51 21Zm216 0Q666-192 645-213.21t-21-51Q624-294 645.21-315t51-21Q726-336 747-314.79t21 51Q768-234 746.79-213t-51 21Zm-432-216Q234-408 213-429.21t-21-51Q192-510 213.21-531t51-21Q294-552 315-530.79t21 51Q336-450 314.79-429t-51 21Zm216 0Q450-408 429-429.21t-21-51Q408-510 429.21-531t51-21Q510-552 531-530.79t21 51Q552-450 530.79-429t-51 21Zm216 0Q666-408 645-429.21t-21-51Q624-510 645.21-531t51-21Q726-552 747-530.79t21 51Q768-450 746.79-429t-51 21Zm-432-216Q234-624 213-645.21t-21-51Q192-726 213.21-747t51-21Q294-768 315-746.79t21 51Q336-666 314.79-645t-51 21Zm216 0Q450-624 429-645.21t-21-51Q408-726 429.21-747t51-21Q510-768 531-746.79t21 51Q552-666 530.79-645t-51 21Z"/></svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow" style="margin-left: -3rem;">
+            <li><a>Impostazioni</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+        <a href="https://discord.gocciola.xyz"><button class="btn btn-primary" style="margin: 0; margin-left: 1rem; background-color: rgba(116, 128, 255, 0.5); color: aliceblue;">Server Discord</button></a>
+      </div>
+    </div>
+
+    <div class="vertical-shadow"></div>
+
+    <!-- Main Content -->
+    <div class="heroP">
+        <h1 style="padding-top: 7rem;" id="titolo">Buonsalve, sono <span class="gradient-text">gocciola</span>.</h1>
+        <h2 id="descrizione"></h2>
+        <h3 style="margin-top: 1rem;">..., ho 16 anni e sono anche uno studente.</h3>
+        <p>Mi piace tanto programmare tanto al PC ma anche giocare e... dormire!</p>
+        <div class="stats shadow heroPsemitransp" style="margin-top: 3rem;">
+            <div class="stat">
+              <div class="stat-figure text-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-8 w-8 stroke-current">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <div class="stat-title">Followers</div>
+              <div class="stat-value text-primary"><span class="gradient-text">12k+</span></div>
+              <div class="stat-desc">TikTok</div>
+            </div>
+          
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-8 w-8 stroke-current">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                </svg>
+              </div>
+              <div class="stat-title">Progetti</div>
+              <div class="stat-value text-secondary">1</div>
+              <div class="stat-desc">11 repo su GitHub</div>
+            </div>
+          
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <div class="avatar">
+                  <div class="w-16 rounded-full">
+                    <img src="https://images.guns.lol/K5Yi9.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="stat-value">50+</div>
+              <div class="stat-title">Utenti Galaxyde</div>
+              <div class="stat-desc text-secondary">Server Discord</div>
+            </div>
+          </div>
+        <div class="heroPfinal">
+          
+          <div class="tooltip tooltip-top" data-tip="Prossimamente!">
+            <button class="btn btn-primary btn-disabled heroPsemitranspPrimary"><img src="https://winaero.com/blog/wp-content/uploads/2019/09/File-Explorer-fluent-icon.png" width="25" style="filter: grayscale(1) brightness(0.5);">Libreria File</button>
+          </div>
+      
+
+          <a href="https://guns.lol/gocciolabtw"><button class="btn btn-primary heroPsemitranspPrimary" style="margin-left: 1rem; margin-top: 1rem;"><img src="https://assets.guns.lol/guns_logo_no_background_cropped.png" width="25">guns.lol</button></a>
+          <a href="https://github.com/gocciolafr"><button class="btn heroPsemitransp" style="margin-left: 1rem; margin-top: 1rem;"><img src="https://img.icons8.com/ios11/512/FFFFFF/github.png" width="25">GitHub</button></a>
+        </div>
+    </div>
+
+    <h2 style="padding-top: 5rem;">I miei <span class="gradient-text">progetti</span>.</h2>
+    
+    
+    <div class="join">
+        <div class="card bg-base-100 w-96 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title" style="margin-left: 0; width: max-content;">Galaxyde</h2>
+                <p style="margin-left: 0; width: 18rem;">Una community su Discord</p>
+                <div class="card-actions justify-end">
+                <a href="https://discord.gocciola.xyz"><button class="btn btn-primary">Partecipa</button></a>
+            </div>
+        </div></div>
+    </div>
+</body>
+
+<dialog id="settings" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl fixedmodal">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <h3 class="text-lg font-bold" style="margin: 0;" data-lang="settings.title">Impostazioni</h3>
+    <div class="join" style="display: flex; justify-content: center; margin: 0; margin-top: -2rem;">
+      <input class="join-item btn active" type="radio" name="options" data-lang="settings.tabs.general.tab" aria-label="Generale" checked onclick="showTab('generale')" />
+      <input class="join-item btn" type="radio" name="options" data-lang="settings.tabs.display.tab" aria-label="Aspetto" onclick="showTab('aspetto')" />
+      <input class="join-item btn" type="radio" name="options" data-lang="settings.tabs.lang.tab" aria-label="Lingua" onclick="showTab('lingua')" />
+      <input class="join-item btn" type="radio" name="options" data-lang="settings.tabs.info.tab" aria-label="Info" onclick="showTab('info')" />
+    </div>
+
+    <div id="generale" class="tab-content" style="display: none;">
+      <h3 style="margin: 0;">Generale</h3>
+      <p>Questa è la pagina deldle impostazioni generali</p>
+    </div>
+
+    <div id="aspetto" class="tab-content" style="display: none;">
+      <h3 data-lang="settings.tabs.display.title">Aspetto</h3>
+      <div role="alert" class="alert alert-info">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="h-6 w-6 shrink-0 stroke-current">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span data-lang="settings.tabs.display.warn">Attualmente cambiare tema nelle impostazioni non è ancora disponibile. Mi dispiace.</span>
+      </div>
+      <div style="display: flex; align-items: center;">
+        <div class="mockup-window bg-base-300 border" style="margin: 0; width: 25rem; height: 10rem; margin-top: 2rem; background-color: rgba(228,228,230,1);"><div class="bg-base-200 flex justify-center px-4 py-16" style="background-color: #cfd0d0;"></div></div>
+        <div style="flex-direction: column;">
+          <h3 style="margin: 0; margin-left: 3rem;" data-lang="settings.tabs.display.light">Chiaro</h3><br>
+          <button class="btn btn-neutral" style="margin: 0; margin-left: 3rem; width: 10rem;" data-lang="settings.tabs.display.apply" disabled="disabled">Applica</button>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center;">
+        <div class="mockup-window bg-base-300 border" style="margin: 0; width: 25rem; height: 10rem; margin-top: 2rem; background-color: rgba(28,28,30,1);"><div class="bg-base-200 flex justify-center px-4 py-16" style="background-color: #121212;"></div></div>
+        <div style="flex-direction: column;">
+          <h3 style="margin: 0; margin-left: 3rem;" data-lang="settings.tabs.display.dark">Scuro</h3><br>
+          <button class="btn btn-neutral" style="margin: 0; margin-left: 3rem; width: 10rem;" data-lang="settings.tabs.display.apply" disabled="disabled">Applica</button>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center;">
+        <div class="mockup-window bg-base-300 border" style="margin: 0; width: 25rem; height: 10rem; margin-top: 2rem; background-color: #484848;"><div class="bg-base-200 flex justify-center px-4 py-16" style="background-color: #121212;"></div></div>
+        <div style="flex-direction: column;">
+          <h3 style="margin: 0; margin-left: 3rem;" data-lang="settings.tabs.display.auto">Automatico</h3><br>
+          <p style="margin: 0; margin-left: 3rem; margin-top: -1rem;" data-lang="settings.tabs.display.auto_desc">Selezionato in base alle impostazioni del tuo PC</p>
+          <button class="btn btn-primary" style="margin: 0; margin-left: 3rem; width: 10rem;" data-lang="settings.tabs.display.applied" disabled="disabled">Applicato</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lingua" class="tab-content" style="display: block;">
+      <h3 data-lang="settings.tabs.lang.title">Lingua</h3>
+      <p data-lang="settings.tabs.lang.desc">Alcune stringe potrebbero non essere tradotte.</p>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text"><img src="https://flagcdn.com/16x12/it.png">Italiano</span>
+          <input type="radio" name="radio-10" class="radio radio-primary" checked="checked" onclick="changeLanguage('it')" />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text"><img src="https://flagcdn.com/16x12/gb.png">English</span>
+          <input type="radio" name="radio-10" class="radio radio-primary" onclick="changeLanguage('en')" />
+        </label>
+      </div>
+
+      <h3 data-lang="settings.tabs.lang.contribution.title">Contribuisci</h3>
+      <p data-lang="settings.tabs.lang.contribution.desc">Puoi contribuire alla traduzione del sito web su:</p><p><a href='https://crowdin.com/project/gocciola' target='_blank'>- Crowdin</a></p>
+    </div>
+
+    <div id="info" class="tab-content" style="display: none;">
+      <h3 style="margin: 0;">Informazioni</h3>
+      <p>Questa è la pagina delle informazioni</p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.style.display = 'none';
+      });
+      document.getElementById(tabName).style.display = 'block';
+    }
+
+    window.addEventListener('load', () => {
+      document.getElementById('settings').showModal();
+    });
+  </script>
+</dialog>
+
+<script src="/res/script.js"></script>
+<script src="/langs/load.js"></script>
+</html>
