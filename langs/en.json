@@ -1,13 +1,37 @@
 {
+    "detected": {
+        "title": "Website avaiable in English",
+        "desc": "I noticed that you have your device set to English and the site supports this language. Do you want to change the language?",
+        "yes": "Change",
+        "no": "Ignore"
+    },
+    "main": {
+        "title": {
+            "morning": "Good morning, i'm",
+            "afternoon": "Good afternoon, i'm",
+            "evening": "Good evening, i'm",
+            "night": "Good night, i'm"
+        },
+        "desc": {
+            "1": "and i'm /silly/",
+            "2": "and i'm a /sideloader/",
+            "3": "and i'm a /developer/"
+        },
+        "desc2": "..., i'm 16 and i'm stupid.",
+        "desc3": "also i like playing COD and developing stuff.",
+        "prog": "Projects",
+        "prog_desc": "repos on GitHub",
+        "server_desc": "Galaxyde Users",
+        "dsserver": "Discord Server",
+        "files": "File Library",
+        "soon": "Coming soon...",
+        "my": "My projects"
+    },
     "settings": {
         "title" : "Settings",
         "tabs": {
-            "general": {
-                "tab": "General"
-            },
             "display": {
                 "tab": "Display",
-                "title": "Display",
                 "light": "Light",
                 "dark": "Dark",
                 "auto": "Automatic",
@@ -18,7 +42,6 @@
             },
             "lang": {
                 "tab": "Language",
-                "title": "Language",
                 "desc": "Some strings may not be translated yet.",
                 "contribution": {
                     "title": "Contribute",
@@ -26,7 +49,8 @@
                 }
             },
             "info": {
-                "tab": "About"
+                "tab": "About",
+                "desc": "Site made with ❤️ by Gocciola in"
             }
         }
     }

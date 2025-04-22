@@ -12,15 +12,41 @@ function setCookie(name, value, days) {
 }
 
 async function loadLanguageStrings() {
-    let currentLang = getCookie('language') || 'it';
+    let currentLang = getCookie('language') || 'en';
+    let browserLang = navigator.language.split('-')[0];
     
-    if (!getCookie('language')) {
-        setCookie('language', 'it', 365);
-    }
-
+    const supportedLangAlert = document.getElementById('supportedLang').querySelector('.alert');
+    
     try {
         const response = await fetch(`/langs/${currentLang}.json`);
+        if (!response.ok) {
+            throw new Error('Current language file not found');
+        }
         const langData = await response.json();
+        window.langData = langData;
+
+        if (browserLang !== currentLang) {
+            try {
+                const testResponse = await fetch(`/langs/${browserLang}.json`);
+                if (testResponse.ok) {
+                    const browserLangData = await testResponse.json();
+                    if (browserLangData.detected) {
+                        supportedLangAlert.querySelector('h3').textContent = browserLangData.detected.title;
+                        supportedLangAlert.querySelector('.text-xs').textContent = browserLangData.detected.desc;
+                        supportedLangAlert.querySelector('.btn-neutral').textContent = browserLangData.detected.no;
+                        const changeBtn = supportedLangAlert.querySelector('.btn-primary');
+                        changeBtn.textContent = browserLangData.detected.yes;
+                        changeBtn.onclick = () => changeLanguage(browserLang);
+                        supportedLangAlert.style.display = 'flex';
+                    }
+                }
+            } catch (error) {
+                console.error('Error checking browser language:', error);
+                supportedLangAlert.style.display = 'none';
+            }
+        } else {
+            supportedLangAlert.style.display = 'none';
+        }
 
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');
@@ -54,6 +80,10 @@ async function loadLanguageStrings() {
                 radio.checked = langCode === currentLang;
             }
         });
+
+        if (typeof updateTitleAndPhrases === 'function') {
+            await updateTitleAndPhrases();
+        }
 
     } catch (error) {
         console.error('Error loading language strings:', error);

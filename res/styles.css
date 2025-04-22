@@ -323,6 +323,25 @@ span.loading.loading-spinner {
     margin-top: 1rem;
 }
 
+.alert {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    width: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.alert h3 {
+    margin: 0;
+}
+
+.coolcard {
+    background-color: rgba(28,28,30,.5);
+    border: 1px solid hsla(0,0%,100%,.075);
+    border-radius: 1.25rem;
+    width: auto !important;
+}
+
 /* CSS per i dispositivi col tema impostato sul chiaro */
 @media (prefers-color-scheme: light) {
     html {

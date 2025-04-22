@@ -1,23 +1,40 @@
 const titolo = document.getElementById("titolo");
 const ora = new Date().getHours();
+let langData = null;
 
-if (ora >= 5 && ora < 12) {
-    titolo.innerHTML = `Buongiorno, sono <span class="gradient-text">gocciola</span>.`;
-} else if (ora >= 12 && ora < 18) {
-    titolo.innerHTML = `Buon pomeriggio, sono <span class="gradient-text">gocciola</span>.`;
-} else {
-    titolo.innerHTML = `Buonasera, sono <span class="gradient-text">gocciola</span>.`;
+async function updateTitleAndPhrases() {
+    if (!window.langData) return;
+    
+    const langData = window.langData;
+    
+    if (ora >= 5 && ora < 12) {
+        titolo.innerHTML = `${langData.main.title.morning} <span class="gradient-text">gocciola</span>.`;
+    } else if (ora >= 12 && ora < 18) {
+        titolo.innerHTML = `${langData.main.title.afternoon} <span class="gradient-text">gocciola</span>.`;
+    } else if (ora >= 18 && ora < 22) {
+        titolo.innerHTML = `${langData.main.title.evening} <span class="gradient-text">gocciola</span>.`;
+    } else {
+        titolo.innerHTML = `${langData.main.title.night} <span class="gradient-text">gocciola</span>.`;
+    }
+
+    frasi = [
+        langData.main.desc[1],
+        langData.main.desc[2],
+        langData.main.desc[3],
+        "e ho creato /Galaxyde/"
+    ];
+
+    if (frasi.length > 0 && !hasStarted) {
+        hasStarted = true;
+        scrivi();
+    }
 }
 
+let hasStarted = false;
 
 const descrizione = document.getElementById("descrizione");
 
-const frasi = [
-    "e sono /simpatico/",
-    "e sono un /content creator/",
-    "e sono un /developer/",
-    "e ho creato /Galaxyde/"
-];
+let frasi = [];
 
 let fraseIndex = 0;
 let charIndex = 0;
@@ -103,5 +120,3 @@ function blinkCursor() {
         setTimeout(blinkCursor, blinkingSpeed);
     }
 }
-
-scrivi();

@@ -34,7 +34,7 @@
           <ul
             tabindex="0"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li onclick="settings.showModal()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M433-80q-27 0-46.5-18T363-142l-9-66q-13-5-24.5-12T307-235l-62 26q-25 11-50 2t-39-32l-47-82q-14-23-8-49t27-43l53-40q-1-7-1-13.5v-27q0-6.5 1-13.5l-53-40q-21-17-27-43t8-49l47-82q14-23 39-32t50 2l62 26q11-8 23-15t24-12l9-66q4-26 23.5-44t46.5-18h94q27 0 46.5 18t23.5 44l9 66q13 5 24.5 12t22.5 15l62-26q25-11 50-2t39 32l47 82q14 23 8 49t-27 43l-53 40q1 7 1 13.5v27q0 6.5-2 13.5l53 40q21 17 27 43t-8 49l-48 82q-14 23-39 32t-50-2l-60-26q-11 8-23 15t-24 12l-9 66q-4 26-23.5 44T527-80h-94Zm7-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>Impostazioni</a></li>
+            <li onclick="settings.showModal()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M433-80q-27 0-46.5-18T363-142l-9-66q-13-5-24.5-12T307-235l-62 26q-25 11-50 2t-39-32l-47-82q-14-23-8-49t27-43l53-40q-1-7-1-13.5v-27q0-6.5 1-13.5l-53-40q-21-17-27-43t8-49l47-82q14-23 39-32t50 2l62 26q11-8 23-15t24-12l9-66q4-26 23.5-44t46.5-18h94q27 0 46.5 18t23.5 44l9 66q13 5 24.5 12t22.5 15l62-26q25-11 50-2t39 32l47 82q14 23 8 49t-27 43l-53 40q1 7 1 13.5v27q0 6.5-2 13.5l53 40q21 17 27 43t-8 49l-48 82q-14 23-39 32t-50-2l-60-26q-11 8-23 15t-24 12l-9 66q-4 26-23.5 44T527-80h-94Zm7-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg><span data-lang="settings.title">Impostazioni</span></a></li>
           </ul>
         </div>
       </div>
@@ -61,11 +61,30 @@
     <div class="vertical-shadow"></div>
 
     <!-- Main Content -->
-    <div class="heroP">
-        <h1 style="padding-top: 7rem;" id="titolo">Buonsalve, sono <span class="gradient-text">gocciola</span>.</h1>
-        <h2 id="descrizione"></h2>
-        <h3 style="margin-top: 1rem;">..., ho 16 anni e sono anche uno studente.</h3>
-        <p>Mi piace tanto programmare tanto al PC ma anche giocare e... dormire!</p>
+    <div class="heroP" style="padding-top: 7rem;" id="supportedLang">
+      <div role="alert" class="alert shadow-lg coolcard" style="display: none;">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="stroke-info h-6 w-6 shrink-0">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div>
+          <h3 class="font-bold">Website avaiable in English</h3>
+          <div class="text-xs">I noticed that you have your device set to English and the site supports this language. Do you want to change the language?</div>
+        </div>
+        <button class="btn btn-neutral btn-sm" style="margin: 0;">Ignore</button>
+        <button class="btn btn-primary btn-sm" style="margin: 0;">Change</button>
+      </div>
+        <h1 id="titolo">Buonsalve, sono <span class="gradient-text">gocciola</span>.</h1>
+        <h2 style="margin-top: 0;" id="descrizione"></h2>
+        <h3 style="margin-top: 1rem;" data-lang="main.desc2">..., ho 16 anni e sono anche uno studente.</h3>
+        <p data-lang="main.desc3">Mi piace tanto programmare tanto al PC ma anche giocare e... dormire!</p>
         <div class="stats shadow heroPsemitransp" style="margin-top: 3rem;">
             <div class="stat">
               <div class="stat-figure text-primary">
@@ -100,9 +119,9 @@
                     d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
                 </svg>
               </div>
-              <div class="stat-title">Progetti</div>
+              <div class="stat-title" data-lang="main.prog">Progetti</div>
               <div class="stat-value text-secondary">1</div>
-              <div class="stat-desc">11 repo su GitHub</div>
+                <div class="stat-desc">11 <span data-lang="main.prog_desc">progetti su GitHub.</span></div>
             </div>
           
             <div class="stat">
@@ -114,14 +133,14 @@
                 </div>
               </div>
               <div class="stat-value">50+</div>
-              <div class="stat-title">Utenti Galaxyde</div>
-              <div class="stat-desc text-secondary">Server Discord</div>
+              <div class="stat-title" data-lang="main.server_desc">Utenti Galaxyde</div>
+              <div class="stat-desc text-secondary" data-lang="main.dsserver">Server Discord</div>
             </div>
           </div>
         <div class="heroPfinal">
           
           <div class="tooltip tooltip-top" data-tip="Prossimamente!">
-            <button class="btn btn-primary btn-disabled heroPsemitranspPrimary"><img src="https://winaero.com/blog/wp-content/uploads/2019/09/File-Explorer-fluent-icon.png" width="25" style="filter: grayscale(1) brightness(0.5);">Libreria File</button>
+            <button class="btn btn-primary btn-disabled heroPsemitranspPrimary"><img src="https://winaero.com/blog/wp-content/uploads/2019/09/File-Explorer-fluent-icon.png" width="25" style="filter: grayscale(1) brightness(0.5);"><span data-lang="main.files">Libreria File</span></button>
           </div>
       
 
@@ -130,7 +149,7 @@
         </div>
     </div>
 
-    <h2 style="padding-top: 5rem;">I miei <span class="gradient-text">progetti</span>.</h2>
+    <h2 style="padding-top: 5rem;" data-lang="main.my">I miei <span class="gradient-text">progetti</span>.</h2>
     
     
     <div class="join">
@@ -152,8 +171,7 @@
     </form>
     <h3 class="text-lg font-bold" style="margin: 0;" data-lang="settings.title">Impostazioni</h3>
     <div class="join" style="display: flex; justify-content: center; margin: 0; margin-top: -2rem;">
-      <input class="join-item btn active" type="radio" name="options" data-lang="settings.tabs.general.tab" aria-label="Generale" checked onclick="showTab('generale')" />
-      <input class="join-item btn" type="radio" name="options" data-lang="settings.tabs.display.tab" aria-label="Aspetto" onclick="showTab('aspetto')" />
+      <input class="join-item btn active" type="radio" name="options" data-lang="settings.tabs.display.tab" aria-label="Aspetto" checked onclick="showTab('aspetto')" />
       <input class="join-item btn" type="radio" name="options" data-lang="settings.tabs.lang.tab" aria-label="Lingua" onclick="showTab('lingua')" />
       <input class="join-item btn" type="radio" name="options" data-lang="settings.tabs.info.tab" aria-label="Info" onclick="showTab('info')" />
     </div>
@@ -163,9 +181,9 @@
       <p>Questa è la pagina deldle impostazioni generali</p>
     </div>
 
-    <div id="aspetto" class="tab-content" style="display: none;">
-      <h3 data-lang="settings.tabs.display.title">Aspetto</h3>
-      <div role="alert" class="alert alert-info">
+    <div id="aspetto" class="tab-content" style="display: block;">
+      <h3 data-lang="settings.tabs.display.tab">Aspetto</h3>
+      <div role="alert" class="alert alert-info" style="margin: 0; margin-top: 1rem;">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -203,8 +221,8 @@
       </div>
     </div>
 
-    <div id="lingua" class="tab-content" style="display: block;">
-      <h3 data-lang="settings.tabs.lang.title">Lingua</h3>
+    <div id="lingua" class="tab-content" style="display: none;">
+      <h3 data-lang="settings.tabs.lang.tab">Lingua</h3>
       <p data-lang="settings.tabs.lang.desc">Alcune stringe potrebbero non essere tradotte.</p>
       <div class="form-control">
         <label class="label cursor-pointer">
@@ -224,8 +242,14 @@
     </div>
 
     <div id="info" class="tab-content" style="display: none;">
-      <h3 style="margin: 0;">Informazioni</h3>
-      <p>Questa è la pagina delle informazioni</p>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+      <div>
+        <h3 style="margin-top: 0;" data-lang="settings.tabs.info.tab">Informazioni</h3>
+        <p><span data-lang="settings.tabs.info.desc">Sito creato con ❤️ da Gocciola in </span><img style="display: inline; vertical-align: inherit; margin-left: 0.25rem;" src="https://flagcdn.com/16x12/it.png"> .</p>
+        <p style="margin-top: 0.5rem; position: fixed; filter: opacity(0.25);">Ver 2.0.0<br>DaisyUI 4.12.24</p>
+      </div>
+      <img width="100px" src="https://images.guns.lol/XsIVD.png">
+      </div>
     </div>
   </div>
 
@@ -236,10 +260,6 @@
       });
       document.getElementById(tabName).style.display = 'block';
     }
-
-    window.addEventListener('load', () => {
-      document.getElementById('settings').showModal();
-    });
   </script>
 </dialog>
 
