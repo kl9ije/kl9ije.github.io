@@ -12,7 +12,7 @@ function setCookie(name, value, days) {
 }
 
 async function loadLanguageStrings() {
-    let currentLang = getCookie('language') || 'en';
+    let currentLang = getCookie('language') || 'it';
     let browserLang = navigator.language.split('-')[0];
     
     const supportedLangAlert = document.getElementById('supportedLang').querySelector('.alert');
