@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gocciola - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="gocciolabtw" data-description="Support me on Buy me a coffee!" data-message="" data-color="#7480ff" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</head>
+
+
+
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar bg-base-100 fixed">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a>Homepage</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost text-xl" style="font-size: x-large; font-weight: 800; font-family: 'outfit', serif;">gocciola</a>
+      </div>
+      <div class="navbar-end">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#a6adbb"><path d="M263.79-192Q234-192 213-213.21t-21-51Q192-294 213.21-315t51-21Q294-336 315-314.79t21 51Q336-234 314.79-213t-51 21Zm216 0Q450-192 429-213.21t-21-51Q408-294 429.21-315t51-21Q510-336 531-314.79t21 51Q552-234 530.79-213t-51 21Zm216 0Q666-192 645-213.21t-21-51Q624-294 645.21-315t51-21Q726-336 747-314.79t21 51Q768-234 746.79-213t-51 21Zm-432-216Q234-408 213-429.21t-21-51Q192-510 213.21-531t51-21Q294-552 315-530.79t21 51Q336-450 314.79-429t-51 21Zm216 0Q450-408 429-429.21t-21-51Q408-510 429.21-531t51-21Q510-552 531-530.79t21 51Q552-450 530.79-429t-51 21Zm216 0Q666-408 645-429.21t-21-51Q624-510 645.21-531t51-21Q726-552 747-530.79t21 51Q768-450 746.79-429t-51 21Zm-432-216Q234-624 213-645.21t-21-51Q192-726 213.21-747t51-21Q294-768 315-746.79t21 51Q336-666 314.79-645t-51 21Zm216 0Q450-624 429-645.21t-21-51Q408-726 429.21-747t51-21Q510-768 531-746.79t21 51Q552-666 530.79-645t-51 21Zm216 0Q666-624 645-645.21t-21-51Q624-726 645.21-747t51-21Q726-768 747-746.79t21 51Q768-666 746.79-645t-51 21Z"/></svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow" style="margin-left: -3rem;">
+            <li><a>Homepage</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+        <a href="https://discord.gocciola.xyz"><button class="btn btn-primary" style="margin: 0; margin-left: 1rem; background-color: rgba(116, 128, 255, 0.5); color: aliceblue;">Server Discord</button></a>
+      </div>
+    </div>
+
+    <div class="vertical-shadow"></div>
+
+    <!-- Main Content -->
+  
+    <h1 style="padding-top: 7rem;">Tags <span class="gradient-text">Discord</span>.</h1>
+    <p>Vuoi ottenere delle piccole stringe di testo dopo il tuo nome su Discord? In questa pagina puoi!</p>
+    
+    <h2>Tag disponibili</h2>
+    <div role="alert" class="alert alert-warning">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 shrink-0 stroke-current"
+        fill="none"
+        viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+      <span>Salve! Sono qui per avvisarti che i server Discord qui sotto non sono sponsorizzati.</span>
+    </div>
+    <div id="loading">
+      <div class="flex items-center gap-2" style="align-items: end;">
+        <span class="loading loading-spinner loading-lg"></span>
+        <p style="margin-left: 1rem;">Caricamento dei tag, non ci vuole molto...</p>
+      </div>
+      <div class="container" style="margin-top: 2rem;">
+        <div class="skeleton h-32" style="margin: 0;"></div>
+        <div class="skeleton h-32" style="margin: 0;"></div>
+        <div class="skeleton h-32" style="margin: 0;"></div>
+      </div>
+    </div>
+    <div class="container" id="tags"></div>
+
+    <h2>Come posso averlo nel mio server?</h2>
+    <p>Al momento questa funzionalità non è disponibile per tutti. Se vuoi controllare, guarda sul tuo server e se hai il tasto "Potenziamenti server" nella lista dei canali all'inizio allora per te è disponibile!</p>
+    <p>Il costo per attivare i tag è di <b>3 potenziamenti</b>. Pultroppo i boost gratuiti inclusi con Nitro non bastano, quindi dovrai avere un amico che potenzia almeno una volta il tuo server.</p>
+    <a href="https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ" target="_blank" class="btn btn-primary">Pagina di supporto ufficiale Discord</a>
+</body>
+
+<script src="script.js"></script>
+</html>

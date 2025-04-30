@@ -1,0 +1,336 @@
+/* CSS per i dispositivi col tema impostato sul scuro */
+
+body h1 {
+    font-size: 4rem;
+    margin-left: 15rem;
+    font-weight: bold;
+    font-family: "Outfit", serif;
+    width: auto;
+    margin-right: 15rem;
+}
+
+body h2 {
+    font-size: 3rem;
+    margin-left: 15rem;
+    font-weight: bold;
+    font-family: "Outfit", serif;
+    width: auto;
+    margin-right: 15rem;
+}
+
+body h3 {
+    font-size: 1.5rem;
+    margin-left: 15rem;
+    font-weight: bold;
+    font-family: "Inter", serif;
+    width: auto;
+    margin-right: 15rem;
+}
+
+body p {
+    margin-left: 15rem;
+    font-family: "Inter", serif;
+    width: auto;
+    margin-right: 15rem;
+}
+
+html {
+    background-color: #0f1215 !important;
+    margin-bottom: 0;
+}
+
+.navbar.bg-base-100.fixed {
+    background-color: rgb(29, 35, 42, 0.5);
+    backdrop-filter: blur(25px);
+    z-index: 999;
+    margin: 1.5rem;
+    border-radius: 1rem;
+}
+
+.navbar {
+    width: -webkit-fill-available;
+}
+
+.btn.m-1 {
+    background-color: rgb(45, 50, 53, 0.5);
+}
+
+.chat.chat-start {
+    margin-left: 15rem;
+}
+
+.chat.chat-end {
+    margin-right: 15rem;
+}
+
+.collapse.collapse-plus.bg-base-200 {
+    width: 60rem ;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 15rem;
+}
+
+button.btn.btn-primary {
+    margin-left: 15rem;
+    margin-top: 1rem;
+}
+
+ul.steps {
+    width: 60rem;
+    margin-left: 15rem;
+}
+
+.mockup-window {
+    width: 60rem;
+    margin-left: 15rem;
+    margin-top: 1rem;
+}
+
+.input {
+    margin-left: 15rem;
+    margin-top: 1rem;
+}
+
+.modal {
+    backdrop-filter: blur(5px);
+}
+
+button.btn.no-animation {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 15rem;
+    cursor: default;
+}
+
+button.btn.no-animation:hover {
+    background-color: #191e24;
+}
+
+ul.bg-base-100.rounded-t-none.p-2 {
+    width: 15rem;
+    margin-left: -10rem;
+    margin-top: 2rem;
+}
+
+.overflow-x-auto {
+    width: 60rem;
+    margin-left: 15rem;
+    margin-top: 1rem;
+}
+
+.join {
+    margin-top: 1rem;
+    margin-left: 15rem;
+}
+
+h2#descrizione {
+    height: 3rem;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #3a4080, #7480ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-shadow: #7480ff 0px 0px 25px;
+}
+
+.stats {
+    margin-left: 15rem;
+    font-family: 'Inter';
+    width: -webkit-fill-available;
+    margin-right: 15rem;
+}
+
+.stat-value {
+    font-family: "Outfit", serif;
+}
+
+.heroPfinal {
+    text-align: end;
+    margin-right: 15rem;
+}
+
+.heroP {
+    background-image: url("https://images.guns.lol/XVIj6.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 69rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #3f4144;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.25);
+}
+
+.heroPsemitransp {
+    background-color: rgb(29 35 42 / 50%);
+    backdrop-filter: blur(5px);
+}
+
+.heroPsemitranspPrimary {
+    background-color: rgb(116 128 255 / 50%);
+    backdrop-filter: blur(5px);
+    color: white;
+    margin-left: 1rem !important;
+    margin-top: 0.5rem !important;
+}
+
+.vertical-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    box-shadow: inset 0px 30px 35px 0px #0f1215;
+    pointer-events: none;
+    z-index: -1;
+    z-index: 998;
+    backdrop-filter: blur(5px);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+
+/* CSS per i dispositivi col tema impostato sul chiaro */
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: #cfd0d0 !important;
+    }
+
+    .navbar.bg-base-100.fixed {
+        background-color: rgb(159, 160, 161, 0.5);
+        backdrop-filter: blur(25px);
+        z-index: 999;
+    }
+
+    .heroP {
+        background-image: url("https://images.guns.lol/3F7N0.png");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 69rem;
+        padding-bottom: 1rem;
+        border-bottom: 3px solid #3f4144;
+        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.25);
+    }
+
+    .heroPsemitransp {
+        background-color: rgba(183, 184, 185, 0.25);
+        backdrop-filter: blur(5px);
+    }
+
+    .heroPsemitranspPrimary {
+        background-color: rgb(116 128 255 / 25%);
+        backdrop-filter: blur(5px);
+        color: white;
+    }
+}
+
+/* Smaller Mobile Devices (for screens smaller than 480px) */
+@media (max-width: 1000px) {
+    body h1 {
+        margin-left: 1rem;
+        font-size: 2rem;
+        margin-right: 1rem;
+        font-family: "Inter", serif;
+    }
+
+    body h2 {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        font-family: "Inter", serif;
+    }
+    
+    body p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-family: "Inter", serif;
+    }
+
+    button.btn.btn-wide {
+        margin-top: 1rem;
+        width: 10rem;
+    }
+
+    .collapse.collapse-plus.bg-base-200 {
+        width: auto;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .chat.chat-start {
+        margin-left: 1rem;
+    }
+
+    .chat.chat-end {
+        margin-right: 1rem;
+    }
+
+    button.btn.btn-primary {
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    ul.steps {
+        width: auto;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+    
+    .input {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    button.btn.no-animation {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        cursor: default;
+    }
+
+    .overflow-x-auto {
+        width: auto;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    .join {
+        display: grid;
+        margin: 0;
+        grid-template-columns: auto;
+    }
+
+    .card.bg-base-100.w-96.shadow-xl {
+        width: auto;
+        margin: 1rem;
+        container-type: inline-size;
+    }
+
+    body h3 {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        font-weight: bold;
+        font-family: "Inter", serif;
+        width: auto;
+        margin-right: 1rem;
+    }
+
+    .navbar {
+        position: fixed !important;
+    }
+
+    .stats {
+        margin-left: 1rem;
+        font-family: 'Inter';
+        width: -webkit-fill-available;
+        margin-right: 1rem;
+    }
+
+    .heroPfinal {
+        text-align: end;
+        margin-right: 1rem;
+    }
+}
