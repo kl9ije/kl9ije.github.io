@@ -231,6 +231,11 @@ button, .btn {
     border: 1px solid hsla(0,0%,100%,.075);
     border-radius: 1.25rem;
     width: auto !important;
+    height: 10rem;
+}
+
+.card-actions {
+    margin-top: -5rem;
 }
 
 .container {
