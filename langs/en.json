@@ -5,6 +5,7 @@
         "yes": "Change",
         "no": "Ignore"
     },
+    
     "main": {
         "title": {
             "morning": "Good morning, i'm",
@@ -27,6 +28,7 @@
         "soon": "Coming soon...",
         "my": "My projects"
     },
+    
     "settings": {
         "title" : "Settings",
         "tabs": {
@@ -52,6 +54,21 @@
                 "tab": "About",
                 "desc": "Site made with ❤️ by Gocciola in"
             }
+        }
+    },
+
+    "tags": {
+        "desc": "Want to get little strings of text after your name on Discord? On this page you can!",
+        "avaiable": {
+            "title": "Avaiable Tags",
+            "warning": "Hello! I'm here to let you know that the Discord servers below are not sponsored.",
+            "get": "Get tag"
+        },
+        "howto": {
+            "title": "How can I have it in my server?",
+            "desc1": "This feature is not available to everyone at the moment. If you want to check, look at your server and if you have the 'Server Upgrades' button in the channel list at the top then it is available to you!",
+            "desc2": "The cost to activate the tags is 3 boosts. Sadly the free boosts included with Nitro are not enough, so you will need to have a friend boost your server at least once.",
+            "wiki": "Official Discord Support Page"
         }
     }
 }

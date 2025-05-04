@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gocciola - Home</title>
+    <title>Gocciola - Tags Discord</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../res/styles.css">
 
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="gocciolabtw" data-description="Support me on Buy me a coffee!" data-message="" data-color="#7480ff" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </head>
@@ -64,9 +64,30 @@
     <!-- Main Content -->
   
     <h1 style="padding-top: 7rem;">Tags <span class="gradient-text">Discord</span>.</h1>
-    <p>Vuoi ottenere delle piccole stringe di testo dopo il tuo nome su Discord? In questa pagina puoi!</p>
+
+    <div role="alert" class="alert shadow-lg coolcard" style="display: none;" id="supportedLang">
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="stroke-info h-6 w-6 shrink-0">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <div>
+        <h3 class="font-bold">Website avaiable in English</h3>
+        <div class="text-xs">I noticed that you have your device set to English and the site supports this language. Do you want to change the language?</div>
+      </div>
+        <button class="btn btn-neutral btn-sm">Ignore</button>
+        <button class="btn btn-primary btn-sm" style="margin: 0;">Change</button>
+    </div>
+
+    <p data-lang="tags.desc">Vuoi ottenere delle piccole stringe di testo dopo il tuo nome su Discord? In questa pagina puoi!</p>
     
-    <h2>Tag disponibili</h2>
+    <h2 data-lang="tags.avaiable.title">Tag disponibili</h2>
     <div role="alert" class="alert alert-warning">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +100,7 @@
           stroke-width="2"
           d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
       </svg>
-      <span>Salve! Sono qui per avvisarti che i server Discord qui sotto non sono sponsorizzati.</span>
+      <span data-lang="tags.avaiable.warning">Salve! Sono qui per avvisarti che i server Discord qui sotto non sono sponsorizzati.</span>
     </div>
     <div id="loading">
       <div class="flex items-center gap-2" style="align-items: end;">
@@ -94,10 +115,10 @@
     </div>
     <div class="container" id="tags"></div>
 
-    <h2>Come posso averlo nel mio server?</h2>
-    <p>Al momento questa funzionalità non è disponibile per tutti. Se vuoi controllare, guarda sul tuo server e se hai il tasto "Potenziamenti server" nella lista dei canali all'inizio allora per te è disponibile!</p>
-    <p>Il costo per attivare i tag è di <b>3 potenziamenti</b>. Pultroppo i boost gratuiti inclusi con Nitro non bastano, quindi dovrai avere un amico che potenzia almeno una volta il tuo server.</p>
-    <a href="https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ" target="_blank" class="btn btn-primary">Pagina di supporto ufficiale Discord</a>
+    <h2 data-lang="tags.howto.title">Come posso averlo nel mio server?</h2>
+    <p data-lang="tags.howto.desc1">Al momento questa funzionalità non è disponibile per tutti. Se vuoi controllare, guarda sul tuo server e se hai il tasto "Potenziamenti server" nella lista dei canali all'inizio allora per te è disponibile!</p>
+    <p data-lang="tags.howto.desc2">Il costo per attivare i tag è di <b>3 potenziamenti</b>. Pultroppo i boost gratuiti inclusi con Nitro non bastano, quindi dovrai avere un amico che potenzia almeno una volta il tuo server.</p>
+    <a href="https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ" target="_blank" class="btn btn-primary" data-lang="tags.howto.wiki">Pagina di supporto ufficiale Discord</a>
 </body>
 
 <dialog id="settings" class="modal">
@@ -199,8 +220,8 @@
   </script>
 </dialog>
 
-<script src="/res/script.js"></script>
-<script src="/langs/load.js"></script>
+<script src="../res/script.js"></script>
+<script src="../langs/load.js"></script>
 
 <script src="script.js"></script>
 </html>

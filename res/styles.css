@@ -342,6 +342,14 @@ span.loading.loading-spinner {
     width: auto !important;
 }
 
+.tagcard {
+    height: 10rem;
+}
+
+.tagcard .card-actions a {
+    margin-top: -4rem;
+}
+
 /* CSS per i dispositivi col tema impostato sul chiaro */
 @media (prefers-color-scheme: light) {
     html {
@@ -530,6 +538,11 @@ span.loading.loading-spinner {
     }
 
     div#tags {
+        margin-right: 1rem;
+    }
+
+    .coolcard {
+        margin-left: 1rem;
         margin-right: 1rem;
     }
 }

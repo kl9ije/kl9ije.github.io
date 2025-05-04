@@ -15,7 +15,7 @@ async function loadLanguageStrings() {
     let currentLang = getCookie('language') || 'it';
     let browserLang = navigator.language.split('-')[0];
     
-    const supportedLangAlert = document.getElementById('supportedLang').querySelector('.alert');
+    const supportedLangAlert = document.getElementById('supportedLang');
     
     try {
         const response = await fetch(`/langs/${currentLang}.json`);
@@ -37,7 +37,7 @@ async function loadLanguageStrings() {
                         const changeBtn = supportedLangAlert.querySelector('.btn-primary');
                         changeBtn.textContent = browserLangData.detected.yes;
                         changeBtn.onclick = () => changeLanguage(browserLang);
-                        supportedLangAlert.style.display = 'flex';
+                        supportedLangAlert.style.display = 'grid';
                     }
                 }
             } catch (error) {
@@ -81,7 +81,7 @@ async function loadLanguageStrings() {
             }
         });
 
-        if (typeof updateTitleAndPhrases === 'function') {
+        if (typeof updateTitleAndPhrases === 'function' && document.title === 'Gocciola - Home') {
             await updateTitleAndPhrases();
         }
 
