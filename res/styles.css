@@ -16,7 +16,7 @@ body h2 {
     font-family: "Outfit", serif;
     width: auto;
     margin-right: 15rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 body h3 {
@@ -37,6 +37,11 @@ body p {
     margin-top: 1rem;
 }
 
+.alignImg {
+    margin-left: 15rem;
+    margin-top: 1rem;
+}
+
 span.label-text {
     font-family: "Figtree", serif;
     font-size: 18px;
@@ -49,7 +54,7 @@ a.btn.btn-primary {
 
 html {
     background-color: #000 !important;
-    margin-bottom: 10rem;
+    padding-bottom: 5rem;
 }
 
 .navbar.bg-base-100.fixed {
@@ -57,14 +62,14 @@ html {
     backdrop-filter: blur(30px) saturate(1);
     z-index: 999;
     margin: 1.5rem;
-    border-radius: 1.25rem;
+    border-radius: 24px;
     border: 1px solid hsla(0,0%,100%,.075);
+    width: -moz-available;
     width: -webkit-fill-available;
 }
 
 .navbar .btn {
-    border-radius: 1.25rem;
-    height: 3.5rem;
+    border-radius: 16px;
 }
 
 ul.menu.menu-sm.dropdown-content {
@@ -166,6 +171,7 @@ h2#descrizione {
 .stats {
     margin-left: 15rem;
     font-family: 'Inter';
+    width: -moz-available;
     width: -webkit-fill-available;
     margin-right: 15rem;
 }
@@ -350,6 +356,34 @@ span.loading.loading-spinner {
     margin-top: -4rem;
 }
 
+.dotted {
+    margin-left: 17rem;
+    margin-top: 1rem;
+    list-style-type: disc;
+}
+
+.collapse {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    width: auto;
+    margin-top: 1rem;
+    background-color: rgba(28,28,30,.5);
+    border: 1px solid hsla(0,0%,100%,.075);
+    border-radius: 1.25rem;
+}
+
+.collapse p {
+    margin: 0;
+}
+
+.collapse-title {
+    font-family: "Outfit", serif;
+}
+
+.table {
+    font-family: "Figtree", serif;
+}
+
 /* CSS per i dispositivi col tema impostato sul chiaro */
 @media (prefers-color-scheme: light) {
     html {
@@ -402,6 +436,10 @@ span.loading.loading-spinner {
 
 /* Smaller Mobile Devices (for screens smaller than 480px) */
 @media (max-width: 1000px) {
+    html {
+        padding-bottom: 7rem;
+    }
+
     body h1 {
         margin-left: 1rem;
         font-size: 2rem;
@@ -421,6 +459,12 @@ span.loading.loading-spinner {
         margin-right: 1rem;
         font-family: "Figtree", serif;
     }
+
+    .alignImg {
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    
 
     button.btn.btn-wide {
         margin-top: 1rem;
@@ -477,6 +521,9 @@ span.loading.loading-spinner {
     .join {
         display: grid;
         margin: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
         grid-template-columns: auto;
     }
 
@@ -542,6 +589,17 @@ span.loading.loading-spinner {
     }
 
     .coolcard {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .dotted {
+        margin-left: 3.5rem;
+        margin-top: 1rem;
+        list-style-type: disc;
+    }
+
+    .collapse {
         margin-left: 1rem;
         margin-right: 1rem;
     }

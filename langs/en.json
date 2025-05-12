@@ -25,8 +25,57 @@
         "server_desc": "Galaxyde Users",
         "dsserver": "Discord Server",
         "files": "File Library",
-        "soon": "Coming soon...",
-        "my": "My projects"
+        "me": {
+            "title": "😎 Who am I?",
+            "desc": "I am an Italian guy and I like programming in Python, HTML and many other languages. Also, I can create Discord Bots, Android Apps and iOS mods.",
+            "table": {
+                "1": "🔭 I'm working on Spotifinity",
+                "2": "🌱 I'm learning Flutter",
+                "3": "⚡ Maybe i'm stupid and funny"
+            }
+        },
+        "projects": {
+            "title": "📂 My Projects"
+        },
+        "lang": {
+            "title": "✏️ Coding Languages",
+            "desc": "I know a few programming languages, from the easier ones (HTML, CSS, JS and Python) to the more complex ones (Lua)."
+        },
+        "faq": {
+            "questions": {
+                "1": {
+                    "title": "When did you start?",
+                    "desc1": "I started when I was only 13 years old, at the time I didn't know HTML and CSS very well, in fact I made a highly disgusting site.",
+                    "desc2": "But then I improved a lot over time and now I can make nice websites (see my website at the beginning)."
+                },
+                "2": {
+                    "title": "How many languages ​​do you know?",
+                    "desc": "I know 5 languages, including Italian (which is my native language), English, Albanian, French and a little Spanish."
+                },
+                "3": {
+                    "title": "How many Google accounts you have?",
+                    "desc": "I don't know why I have so many but I own and manage 13 Google accounts. Actually there are more but that's because I haven't linked those accounts."
+                },
+                "4": {
+                    "title": "What phone do you have?",
+                    "desc": "My main phone is an iPhone 14. Other phones I have are Samsung S9+, Huawei P20 PRO and Samsung Galaxy Note 3. I also had an OPPO A9 2020, but I gave that to my grandfather because he didn't have a phone."
+                },
+                "5": {
+                    "title": "What computer do you have?",
+                    "desc": "I have a laptop from Acer which is the Nitro AN515-56. I paid for it in 2023 at around 1100€. Here are the technical specifications for the nerds:",
+                    "table": {
+                        "1": "Component",
+                        "2": "Description",
+                        "3": "Memory",
+                        "4": "Screen"
+                    }
+                },
+                "6": {
+                    "title": "How tall are you and how much do you weigh?",
+                    "desc": "I don't question why you want to know how tall I am and how much I weigh but okay... I'm 171 cm tall and weigh 70 kg."
+                }
+            }
+        }
     },
     
     "settings": {
