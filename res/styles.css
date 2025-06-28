@@ -1,5 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
 
+.main-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: auto !important;
+  height: 10rem;
+}
+
+.main-row > .stats,
+.main-row > .card {
+  flex: 1 1 0;
+  height: 100%;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.card-body .badge {
+    margin-right: 1rem;
+}
+
+.card-body h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.card-body h3 {
+    margin-top: -1rem !important;
+}
+
+.mobile-status {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(28, 28, 30, 0.5);
+  backdrop-filter: blur(30px) saturate(1);
+  border: 1px solid hsla(0, 0%, 100%, 0.075);
+  border-radius: 24px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 99999;
+  transition: width 0.4s ease, height 0.4s ease;
+  overflow: hidden;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transform-origin: bottom right;
+}
+
+.mobile-status-content {
+	width: -moz-available;
+    width: -webkit-fill-available;
+    height: inherit;
+}
+
+.mobile-status.expanded {
+  width: calc(100% - 2rem);
+  height: 15rem;
+  right: 1rem;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.mobile-status-icon {
+    margin: 0.5rem;
+}
+
+/* nasconde icona quando espanso */
+.mobile-status.expanded .mobile-status-icon {
+  display: none;
+}
+
+/* mostra contenuto quando espanso */
+.mobile-status.expanded .mobile-status-content {
+  display: block !important;
+}
+
+
+@media (max-width: 1000px) {
+  .main-row {
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: auto;
+    gap: 1rem;
+  }
+  .main-row > .stats,
+  .main-row > .card {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    min-width: 0;
+  }
+}
+
 body h1 {
     font-size: 4rem;
     margin-left: 15rem;
@@ -462,9 +563,11 @@ span.loading.loading-spinner {
 
     .alignImg {
         margin-left: 1rem;
+        margin-right: 1rem;
         margin-top: 1rem;
+        width: -webkit-fill-available;
+        width: -moz-available;
     }
-    
 
     button.btn.btn-wide {
         margin-top: 1rem;
@@ -602,5 +705,17 @@ span.loading.loading-spinner {
     .collapse {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+
+    .main-row {
+        height: 10rem;
+    }
+
+    .main-row .card {
+        display: none;
+    }
+
+    .mobile-status {
+        display: flex;
     }
 }

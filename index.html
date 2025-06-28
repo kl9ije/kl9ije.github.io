@@ -8,10 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="res/styles.css">
 
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="gocciolabtw" data-description="Support me on Buy me a coffee!" data-message="" data-color="#7480ff" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="gocciolabtw" data-description="Support me on Buy me a coffee!" data-message="" data-color="#7480ff" data-position="Right" data-x_margin="18" data-y_margin="108"></script>
 </head>
-
-
 
 <body>
   <div class="navbar bg-base-100 fixed">
@@ -61,36 +59,40 @@
     <h2 style="margin-top: 0;" id="descrizione"></h2>
     <h3 style="margin-top: 1rem;" data-lang="main.desc2">..., ho 16 anni e sono anche uno studente.</h3>
     <p data-lang="main.desc3">Mi piace tanto programmare tanto al PC ma anche giocare e... dormire!</p>
-    <div class="stats shadow heroPsemitransp" style="margin-top: 3rem;">
-      <div class="stat">
-        <div class="stat-figure text-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-8 w-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+    <div class="main-row">
+      <div class="stats shadow heroPsemitransp" style="margin-top: 0;">      
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-8 w-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+          </div>
+          <div class="stat-title" data-lang="main.prog">Progetti</div>
+          <div class="stat-value text-secondary">1</div>
+          <div class="stat-desc">11 <span data-lang="main.prog_desc">progetti su GitHub.</span></div>
         </div>
-        <div class="stat-title">Followers</div>
-        <div class="stat-value text-primary"><span class="gradient-text">12k+</span></div>
-        <div class="stat-desc">TikTok</div>
-      </div>
-      
-      <div class="stat">
-        <div class="stat-figure text-secondary">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-8 w-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-        </div>
-        <div class="stat-title" data-lang="main.prog">Progetti</div>
-        <div class="stat-value text-secondary">1</div>
-        <div class="stat-desc">11 <span data-lang="main.prog_desc">progetti su GitHub.</span></div>
-      </div>
-      
-      <div class="stat">
-        <div class="stat-figure text-secondary">
-          <div class="avatar">
-            <div class="w-16 rounded-full">
-              <img src="https://images.guns.lol/K5Yi9.png" />
+        
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <div class="avatar">
+              <div class="w-16 rounded-full">
+                <img src="https://images.guns.lol/K5Yi9.png" />
+              </div>
             </div>
           </div>
+          <div class="stat-value">50+</div>
+          <div class="stat-title" data-lang="main.server_desc">Utenti Galaxyde</div>
+          <div class="stat-desc text-secondary" data-lang="main.dsserver">Server Discord</div>
         </div>
-        <div class="stat-value">50+</div>
-        <div class="stat-title" data-lang="main.server_desc">Utenti Galaxyde</div>
-        <div class="stat-desc text-secondary" data-lang="main.dsserver">Server Discord</div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 id="activity" style="margin: 0; width: max-content; display: flex; align-items: center;">loading...<span style="margin-left: 0.5rem;"></span></h3>
+          <h2 id="details">loading...</h2>
+          <p style="margin: 0" id="state">loading...</p>
+          <div style="display: flex; align-items: center; margin-top: -0.5rem;" id="progress">
+            <progress class="progress progress-primary" value="0" max="100" id="timebar"></progress>
+            <p style="margin: 0; margin-left: 1rem; width: 8rem;" id="time">-:-- / -:--</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="heroPfinal">
@@ -109,7 +111,6 @@
   </ul>
   <div class="join">
     <img src="https://github-readme-stats.vercel.app/api?username=gocciolafr&locale=it&show_icons=true&theme=dark#gh-dark-mode-only">
-    <img src="https://streak-stats.demolab.com?user=gocciolafr&theme=dark&locale=it&mode=weekly&exclude_days=Fri%2CSat" style="margin-left: 1.5rem;">
   </div>
   
   <h2 data-lang="main.projects.title">📂 I miei <span class="gradient-text">progetti</span></h2>
@@ -208,6 +209,24 @@
     <div class="collapse-title text-xl font-medium" data-lang="main.faq.questions.6.title">Quanto sei alto e quanto pesi?</div>
     <div class="collapse-content">
       <p data-lang="main.faq.questions.6.desc">Non mi faccio domande sul perché tu voglia sapere quanto sono alto e quanto peso ma okay... Sono alto 171 cm e peso 70 kg.</p>
+    </div>
+  </div>
+
+  <div class="mobile-status">
+  <div class="mobile-status-icon">
+    <img src="res/banana.gif" />
+  </div>
+  <div class="mobile-status-content" style="display:none;">
+    <div class="card-body" style="height: inherit;">
+      <h3 id="activity-mobile" style="margin: 0; width: auto; display: flex; align-items: center;">loading...<span style="margin-left: 0.5rem;"></span></h3>
+      <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%;">
+        <h2 id="details-mobile">loading...</h2>
+        <p style="margin: 0" id="state-mobile">loading...</p>
+        <div style="display: flex; align-items: center; margin-top: -0.5rem; margin-bottom: -1rem;" id="progress-mobile">
+          <progress class="progress progress-primary" value="0" max="100" id="timebar-mobile"></progress>
+          <p style="margin: 0; margin-left: 1rem; width: 9rem;" id="time-mobile">-:-- / -:--</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>
