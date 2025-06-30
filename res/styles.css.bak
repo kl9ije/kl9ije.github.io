@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
 
 .main-row {
-	display: flex;
-	flex-direction: row;
-	align-items: stretch;
-	gap: 2rem;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	width: 60rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: auto !important;
+  height: 10rem;
 }
 
 .main-row > .stats,
@@ -21,19 +22,12 @@
   box-sizing: border-box;
 }
 
-.card-body {
-    margin: 3rem;
-    padding: 0;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-
 .card-body .badge {
     margin-right: 1rem;
 }
 
 .card-body h2 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     margin: 0;
 }
 
@@ -61,7 +55,7 @@
 }
 
 .mobile-status-content {
-    width: -moz-available;
+	width: -moz-available;
     width: -webkit-fill-available;
     height: inherit;
 }
@@ -107,30 +101,6 @@
   }
 }
 
-html {
-  background-image: 
-    linear-gradient(90deg, #0c0c0c 1px, transparent 1px),
-    linear-gradient(180deg, #0c0c0c 1px, transparent 1px) !important;
-  background-size: 50px 50px !important; /* dimensione dei quadrati */
-}
-
-.wrapper {
-  width: 1000px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.centered {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 60rem !important;
-}
-
-body {
-    color: #f0f0f0;
-}
-
 body h1 {
     font-size: 4rem;
     margin-left: 15rem;
@@ -142,11 +112,12 @@ body h1 {
 
 body h2 {
     font-size: 3rem;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
+    margin-left: 15rem;
     font-weight: bold;
     font-family: "Outfit", serif;
-    text-align: center;
+    width: auto;
+    margin-right: 15rem;
+    margin-top: 2rem;
 }
 
 body h3 {
@@ -159,10 +130,12 @@ body h3 {
 }
 
 body p {
+    margin-left: 15rem;
     font-family: "Figtree", serif;
     width: auto;
-    font-size: 1.25rem;
-    text-align: center;
+    margin-right: 15rem;
+    font-size: 18px;
+    margin-top: 1rem;
 }
 
 .alignImg {
@@ -189,15 +162,11 @@ html {
     background-color: rgba(28,28,30,.5);
     backdrop-filter: blur(30px) saturate(1);
     z-index: 999;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem;
     border-radius: 24px;
     border: 1px solid hsla(0,0%,100%,.075);
-    width: 45rem;
-    left: 0;
-    right: 0;
+    width: -moz-available;
+    width: -webkit-fill-available;
 }
 
 .navbar .btn {
@@ -218,24 +187,6 @@ ul.menu.menu-sm.dropdown-content {
 
 .btn.m-1 {
     background-color: rgb(45, 50, 53, 0.5);
-}
-
-.socials {
-    width: fit-content;
-    display: inherit;
-}
-
-.social {
-    margin-right: 1rem;
-}
-
-.socials .social svg {
-	height: 3.5rem;
-	background-color: rgba(48, 48, 60, 0.5);
-	border: 1px solid hsla(0, 0%, 100%, 0.075);
-	border-radius: 8px;
-	padding: 0.5rem;
-	fill: rgba(96, 96, 96);
 }
 
 .chat.chat-start {
@@ -391,9 +342,7 @@ button, .btn {
     background-color: rgba(28,28,30,.5);
     border: 1px solid hsla(0,0%,100%,.075);
     border-radius: 1.25rem;
-    width: auto;
-    margin-left: 20rem;
-    margin-right: 20rem;
+    width: auto !important;
 }
 
 .container {
@@ -493,10 +442,11 @@ span.loading.loading-spinner {
     margin: 0;
 }
 
-.cool-card {
+.coolcard {
     background-color: rgba(28,28,30,.5);
     border: 1px solid hsla(0,0%,100%,.075);
-    backdrop-filter: blur(5px);
+    border-radius: 1.25rem;
+    width: auto !important;
 }
 
 .tagcard {
@@ -532,51 +482,6 @@ span.loading.loading-spinner {
 }
 
 .table {
-    font-family: "Figtree", serif;
-}
-
-.marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    border: 1px solid hsla(0, 0%, 100%, 0.075);
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
-.marquee:hover .track {
-    animation-play-state: paused;
-}
-
-.track {
-    display: flex;
-    will-change: transform;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-VAR_WIDTHpx); }
-}
-
-.track-card svg {
-    height: 1.5rem;
-}
-
-.track-card {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: rgba(48, 48, 60, 0.5);
-  fill: rgba(96, 96, 96);
-  border: 1px solid hsla(0, 0%, 100%, 0.075);
-  border-radius: 8px;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  box-shadow: 0 0 10px #0005;
-  text-align: center;
-}
-
-.track-card span {
     font-family: "Figtree", serif;
 }
 
