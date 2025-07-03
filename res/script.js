@@ -358,5 +358,11 @@ window.addEventListener('load', () => {
       item.appendChild(valueElem);
       container.appendChild(item);
     }
+
+    const sharemanTime = document.getElementById("project1stats");
+    sharemanTime.textContent = data.data.kv.shareman;
+
+    const modmyutubeTime = document.getElementById("project2stats");
+    modmyutubeTime.textContent = data.data.kv.modmyutube;
   })
 });

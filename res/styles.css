@@ -21,10 +21,8 @@
 }
 
 .card-body {
-    margin: 2rem;
+    margin: 1rem;
     padding: 0;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .card-body .badge {
@@ -170,7 +168,6 @@ span.label-text {
 }
 
 a.btn.btn-primary {
-    margin-left: 15rem;
     margin-top: 1rem;
 }
 
@@ -644,7 +641,6 @@ span.loading.loading-spinner {
   grid-template-columns: repeat(53, 1fr);
   gap: 3px;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .graph-day {
@@ -660,6 +656,52 @@ span.loading.loading-spinner {
 .graph-day[data-level="2"] { background-color: #464d99; }
 .graph-day[data-level="3"] { background-color: #5d66cc; }
 .graph-day[data-level="4"] { background-color: #7480ff; }
+
+.pinnedprojects {
+	display: inherit;
+	gap: 2rem;
+}
+
+.pinnedprojects .item {
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+.pinnedprojects .item p {
+    font-family: "Figtree", serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.tags {
+    margin-top: 0.75rem;
+}
+
+.badge {
+    font-family: "Figtree", serif;
+}
+
+.tag {
+    color: #848484;
+}
+
+.projectstats {
+	display: inline-flex;
+    margin-top: 1rem;
+}
+
+.projectstats p {
+	width: fit-content;
+    margin-right: 0.5rem;
+}
+
+.pinnedprojects .item a {
+	margin: 0;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	width: inherit;
+}
 
 /* CSS per i dispositivi col tema impostato sul chiaro */
 @media (prefers-color-scheme: light) {
