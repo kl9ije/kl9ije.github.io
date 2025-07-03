@@ -3,6 +3,7 @@ const ora = new Date().getHours();
 let langData = null;
 
 const userId = "407804601551683584";
+const birthDate = new Date("2008-06-02T00:00:00Z");
 
 const activityCard = document.getElementById("activity-card");
 const activityDiv = document.getElementById("activity");
@@ -175,7 +176,7 @@ async function updateStatus() {
         "path": "M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63",
         "fill": "#663399"
       },
-      "Other": {
+      "Others": {
         "path": "M9.825 17.527a.111.111 0 0 1-.107-.142l3.05-10.837a.111.111 0 0 1 .108-.081H14.2c.074 0 .127.07.107.141l-3.063 10.838a.111.111 0 0 1-.107.08H9.825Zm-2.146-2.732a.11.11 0 0 1-.079-.033l-2.667-2.704a.111.111 0 0 1 0-.156L7.6 9.211a.111.111 0 0 1 .08-.033h1.702c.1 0 .149.12.079.19l-2.534 2.534a.111.111 0 0 0 0 .157l2.535 2.546c.07.07.02.19-.079.19H7.68Zm6.954 0a.111.111 0 0 1-.079-.19l2.525-2.546a.111.111 0 0 0 0-.157l-2.524-2.535a.111.111 0 0 1 .079-.19h1.692c.03 0 .058.013.078.034l2.68 2.69a.111.111 0 0 1 0 .157l-2.68 2.704a.111.111 0 0 1-.078.033h-1.693ZM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12Zm0-22.667C6.118 1.333 1.333 6.118 1.333 12S6.118 22.667 12 22.667 22.667 17.882 22.667 12 17.882 1.333 12 1.333Z",
         "fill": "#7480ff"
       }
@@ -205,24 +206,42 @@ async function updateStatus() {
       document.getElementById("lang5icon")
     ];
 
+    const tooltips = [
+      document.getElementById("lang1tip"),
+      document.getElementById("lang2tip"),
+      document.getElementById("lang3tip"),
+      document.getElementById("lang4tip"),
+      document.getElementById("lang5tip")
+    ];
+
     const keys = Object.keys(merged);
 
     for (let i = 0; i < 5; i++) {
       bars[i].value = merged[keys[i]];
       texts[i].textContent = merged[keys[i]] + "%";
+      tooltips[i].setAttribute("data-tip", keys[i]);
 
       const langName = keys[i];
       const svg = icons[i];
       if (!svg) continue;
 
-      const langData = languages[langName] || languages["Other"];
+      const langData = languages[langName] || languages["Others"];
 
       const pathEl = svg.querySelector("path");
       if (!pathEl) continue;
 
       pathEl.setAttribute("d", langData.path);
-      svg.style.fill = langData.fill;  // fill sul svg, come nel tuo esempio
+      svg.style.fill = langData.fill;
     }
+
+    const dailystreak = document.getElementById("dailystreak");
+    dailystreak.textContent = d.kv.streak || "--";
+
+    const codingtime = document.getElementById("codingtime");
+    codingtime.textContent = d.kv.codingtime || "--";
+
+    const projects = document.getElementById("projects");
+    projects.textContent = d.kv.projects || "--";
 
   } catch (err) {
     console.error("errore Lanyard:", err);
@@ -232,7 +251,23 @@ async function updateStatus() {
 setInterval(updateStatus, 3000);
 updateStatus();
 
+const ageInt = document.getElementById("age-int")
+const ageDec = document.getElementById("age-decimal")
+
+function updateAge() {
+  const now = new Date();
+  const ageInMilliseconds = now - birthDate;
+  const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24* 365.2425);
+
+  const [intPart, decimalPart] = ageInYears.toFixed(7).split(".");
+  ageInt.textContent = intPart;
+  ageDec.textContent = "." + decimalPart;
+}
+
 window.addEventListener('load', () => {
+
+  setInterval(updateAge, 50);
+
   const trackIds = ['frontend', 'backend', 'others'];
   const speed = 100;
 
@@ -258,4 +293,70 @@ window.addEventListener('load', () => {
     `;
     document.head.appendChild(style);
   });
+
+  function formatTime(seconds) {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    return `${h} hrs ${m} mins`;
+  }
+
+  function formatDate(iso) {
+    const d = new Date(iso);
+    const day = String(d.getDate()).padStart(2, "0");
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
+  fetch("https://wakatime.com/share/embeddable/kl9ije/6724bb9c-0e91-4ab7-bbaf-99a27d1dd741.json")
+    .then(res => res.json())
+    .then(data => {
+      const days = data.days;
+      const container = document.getElementById("activity-graph");
+
+      const max = Math.max(...days.map(d => d.total || 0));
+
+      days.forEach(day => {
+        const level = Math.floor((day.total / max) * 4);
+        const tip = `${formatDate(day.date)} – ${formatTime(day.total)}`;
+
+        const div = document.createElement("div");
+        div.className = "graph-day tooltip";
+        div.dataset.level = level;
+        div.dataset.tip = tip;
+
+        container.appendChild(div);
+      });
+    });
+
+  fetch("https://github-contributions-api.jogruber.de/v4/kl9ije?y=last")
+  .then(res => res.json())
+  .then(data => {
+    const contribs = document.getElementById("contribs");
+    contribs.textContent = data.total.lastYear;
+  });
+
+  fetch(`https://api.lanyard.rest/v1/users/${userId}`)
+  .then(res => res.json())
+  .then(data => {
+    const str2 = data.data.kv.projectlist;
+    const objs2 = str2.match(/\{[^}]+\}/g).map(JSON.parse);
+    const merged2 = Object.assign({}, ...objs2);
+    const container = document.getElementById("projectlist");
+
+    for (const [name, value] of Object.entries(merged2)) {
+      const item = document.createElement("div");
+      item.className = "item";
+
+      const nameElem = document.createElement("p");
+      nameElem.textContent = name;
+
+      const valueElem = document.createElement("span");
+      valueElem.textContent = value;
+
+      item.appendChild(nameElem);
+      item.appendChild(valueElem);
+      container.appendChild(item);
+    }
+  })
 });

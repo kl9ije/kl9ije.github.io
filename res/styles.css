@@ -24,7 +24,7 @@
     margin: 2rem;
     padding: 0;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .card-body .badge {
@@ -34,10 +34,6 @@
 .card-body h2 {
     font-size: 2rem;
     margin: 0;
-}
-
-.card-body h3 {
-    margin-top: -1rem !important;
 }
 
 .mobile-status {
@@ -150,11 +146,10 @@ body h2 {
 
 body h3 {
     font-size: 1.5rem;
-    margin-left: 15rem;
     font-weight: bold;
     font-family: "Figtree", serif;
     width: auto;
-    margin-right: 15rem;
+    text-align: center;
 }
 
 body p {
@@ -587,6 +582,84 @@ span.loading.loading-spinner {
 .card-body svg {
     height: 1.75rem;
 }
+
+.intestation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left, .right {
+  display: flex;
+  gap: 1rem;
+}
+
+.left {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.right {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.item {
+	background-color: rgba(28,28,30,.5);
+	border: 1px solid hsla(0,0%,100%,.075);
+	padding: 1rem;
+	border-radius: 12px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: block;
+    text-align: start;
+}
+
+.item p {
+    text-align: start;
+    font-size: 1.25rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bolder;
+}
+
+.item span {
+    text-align: start;
+    color: rgb(73, 73, 73);
+    font-size: 0.85rem;
+}
+
+.projects {
+    margin-top: -0.75rem;
+}
+
+.projects .item {
+	width: fit-content;
+	display: inline-block;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.graph {
+  display: grid;
+  grid-template-columns: repeat(53, 1fr);
+  gap: 3px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.graph-day {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(28,28,30);
+  border-radius: 2px;
+  position: relative;
+}
+
+/* Color levels */
+.graph-day[data-level="1"] { background-color: #2e3366; }
+.graph-day[data-level="2"] { background-color: #464d99; }
+.graph-day[data-level="3"] { background-color: #5d66cc; }
+.graph-day[data-level="4"] { background-color: #7480ff; }
 
 /* CSS per i dispositivi col tema impostato sul chiaro */
 @media (prefers-color-scheme: light) {
