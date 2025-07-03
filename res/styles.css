@@ -1,5 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap');
 
+.animate-ttb,
+.animate-btt {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animate-ttb {
+  transform: translateY(-30px);
+}
+
+.animate-btt {
+  transform: translateY(30px);
+}
+
+.animate-ttb.show,
+.animate-btt.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-scroll-ttb,
+.animate-scroll-btt,
+.animate-scroll-ltr,
+.animate-scroll-rtl {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animate-scroll-ttb {
+  transform: translateY(-30px);
+}
+
+.animate-scroll-btt {
+  transform: translateY(30px);
+}
+
+.animate-scroll-ltr {
+  transform: translateX(-30px);
+}
+
+.animate-scroll-rtl {
+  transform: translateX(30px);
+}
+
+.animate-scroll-ttb.show,
+.animate-scroll-btt.show,
+.animate-scroll-ltr.show,
+.animate-scroll-rtl.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.animate-scroll-list {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animate-scroll-list.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#typewriter-caret {
+  display: inline-block;
+  margin-left: 2px;
+  animation: fadeCaret 1s forwards infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+@keyframes fadeCaret {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in; /* fade in veloce */
+  }
+  40% {
+    opacity: 1;
+    animation-timing-function: ease-out; /* resta visibile */
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes waveAnim {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  75% { transform: rotate(15deg); }
+  90% { transform: rotate(-10deg); }
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+
 .main-row {
 	display: flex;
 	flex-direction: row;
@@ -189,6 +293,12 @@ html {
     width: 45rem;
     left: 0;
     right: 0;
+    opacity: 0;
+}
+
+.navbar.bg-base-100.fixed.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .navbar .btn {

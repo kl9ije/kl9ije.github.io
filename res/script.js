@@ -366,3 +366,97 @@ window.addEventListener('load', () => {
     modmyutubeTime.textContent = data.data.kv.modmyutube;
   })
 });
+
+window.addEventListener("load", () => {
+  const elements = document.querySelectorAll(".animate-ttb, .animate-btt");
+
+  elements.forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add("show");
+    }, i * 100); // delay a cascata
+  });
+});
+
+function revealOnScroll() {
+  const scrollElements = document.querySelectorAll(
+    ".animate-scroll-ttb, .animate-scroll-btt, .animate-scroll-ltr, .animate-scroll-rtl"
+  );
+
+  scrollElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    const offset = 150;
+
+    if (rect.top < window.innerHeight - offset && !el.classList.contains("show")) {
+      setTimeout(() => {
+        el.classList.add("show");
+      }, 300); // delay fisso per tutti
+    }
+  });
+}
+
+function revealOnScrollList() {
+  const scrollElements = Array.from(document.querySelectorAll(".animate-scroll-list")).filter(
+    el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight - 250 && !el.classList.contains("show");
+    }
+  );
+
+  scrollElements.forEach((listEl, listIndex) => {
+    setTimeout(() => {
+      listEl.classList.add("show"); // opzionale se vuoi animare lista stessa
+      const children = Array.from(listEl.children);
+      children.forEach((child, i) => {
+        setTimeout(() => {
+          child.classList.add("show");
+        }, i * 200); // delay cascata per i figli dentro lista
+      });
+    }, listIndex * 500); // delay tra le liste
+  });
+}
+
+window.addEventListener("scroll", revealOnScrollList);
+window.addEventListener("load", revealOnScrollList);
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+window.addEventListener("load", () => {
+  const p = document.querySelector("p");
+  const fullText = p.textContent.replace("|", "").trim(); // testo senza la barra
+  p.textContent = ""; // svuoto per scrivere lettera per lettera
+
+  const caret = document.createElement("span");
+  caret.id = "typewriter-caret";
+  caret.textContent = "|";
+  p.appendChild(caret);
+
+  setTimeout(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i < fullText.length) {
+        p.textContent = fullText.substring(0, i + 1);
+        p.appendChild(caret);
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 15);
+  }, 250); // delay 1 secondo prima di partire
+});
+
+window.addEventListener("load", () => {
+  const wave = document.querySelector(".wave");
+  if (!wave) return;
+
+  function animateWave() {
+    wave.style.animation = "waveAnim 1s ease-in-out";
+    wave.addEventListener("animationend", () => {
+      wave.style.animation = "";
+    }, { once: true });
+  }
+
+  setTimeout(() => {
+    animateWave();
+  }, 250);
+});
