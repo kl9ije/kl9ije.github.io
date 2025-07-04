@@ -126,12 +126,12 @@ async function updateStatus() {
         bar.removeAttribute("value");
         bar.removeAttribute("max");
 
-        detailsDiv.textContent = game.details || "";
-        stateDiv.textContent = game.state || "";
-
         if (timerInterval) clearInterval(timerInterval);
         timerInterval = setInterval(updateLocalActivityTimer, 1000);
       }
+
+      detailsDiv.textContent = game.details || "";
+      stateDiv.textContent = game.state || "";
 
       content += ` playing ${game.name}`;
 
@@ -251,22 +251,22 @@ async function updateStatus() {
 setInterval(updateStatus, 3000);
 updateStatus();
 
-const ageInt = document.getElementById("age-int")
-const ageDec = document.getElementById("age-decimal")
+// const ageInt = document.getElementById("age-int")
+// const ageDec = document.getElementById("age-decimal")
 
-function updateAge() {
-  const now = new Date();
-  const ageInMilliseconds = now - birthDate;
-  const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24* 365.2425);
+// function updateAge() {
+//   const now = new Date();
+//   const ageInMilliseconds = now - birthDate;
+//   const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24* 365.2425);
 
-  const [intPart, decimalPart] = ageInYears.toFixed(7).split(".");
-  ageInt.textContent = intPart;
-  ageDec.textContent = "." + decimalPart;
-}
+//   const [intPart, decimalPart] = ageInYears.toFixed(7).split(".");
+//   ageInt.textContent = intPart;
+//   ageDec.textContent = "." + decimalPart;
+// }
 
 window.addEventListener('load', () => {
 
-  setInterval(updateAge, 50);
+  // setInterval(updateAge, 50);
 
   const trackIds = ['frontend', 'backend', 'others'];
   const speed = 100;
@@ -373,7 +373,7 @@ window.addEventListener("load", () => {
   elements.forEach((el, i) => {
     setTimeout(() => {
       el.classList.add("show");
-    }, i * 100); // delay a cascata
+    }, i * 100);
   });
 });
 
@@ -389,7 +389,7 @@ function revealOnScroll() {
     if (rect.top < window.innerHeight - offset && !el.classList.contains("show")) {
       setTimeout(() => {
         el.classList.add("show");
-      }, 300); // delay fisso per tutti
+      }, 300);
     }
   });
 }
@@ -404,14 +404,14 @@ function revealOnScrollList() {
 
   scrollElements.forEach((listEl, listIndex) => {
     setTimeout(() => {
-      listEl.classList.add("show"); // opzionale se vuoi animare lista stessa
+      listEl.classList.add("show");
       const children = Array.from(listEl.children);
       children.forEach((child, i) => {
         setTimeout(() => {
           child.classList.add("show");
-        }, i * 200); // delay cascata per i figli dentro lista
+        }, i * 200);
       });
-    }, listIndex * 500); // delay tra le liste
+    }, listIndex * 500);
   });
 }
 
@@ -423,8 +423,8 @@ window.addEventListener("load", revealOnScroll);
 
 window.addEventListener("load", () => {
   const p = document.querySelector("p");
-  const fullText = p.textContent.replace("|", "").trim(); // testo senza la barra
-  p.textContent = ""; // svuoto per scrivere lettera per lettera
+  const fullText = p.textContent.replace("|", "").trim();
+  p.textContent = "";
 
   const caret = document.createElement("span");
   caret.id = "typewriter-caret";
@@ -442,7 +442,7 @@ window.addEventListener("load", () => {
         clearInterval(interval);
       }
     }, 15);
-  }, 250); // delay 1 secondo prima di partire
+  }, 250);
 });
 
 window.addEventListener("load", () => {
@@ -459,4 +459,63 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     animateWave();
   }, 250);
+});
+
+const buttons = document.querySelectorAll('.navbar-center button');
+const sections = Array.from(buttons).map(btn => document.querySelector(btn.dataset.target));
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.6 // quando 60% della sezione è visibile
+};
+
+function fadeOutIn(element, callback) {
+  element.style.transition = 'opacity 0.3s';
+  element.style.opacity = '0';
+
+  setTimeout(() => {
+    callback(); // cambia classi
+    element.style.opacity = '1';
+  }, 300);
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const targetID = `#${entry.target.id}`;
+    buttons.forEach(btn => {
+      if (btn.dataset.target === targetID) {
+        if (entry.isIntersecting) {
+          btn.classList.remove('btn-ghost');
+          btn.classList.add('btn-outline', 'btn-primary');
+          btn.style.transition = 'opacity 0.3s';
+          btn.style.opacity = '0.6';
+          setTimeout(() => btn.style.opacity = '1', 10);
+        } else {
+          btn.classList.remove('btn-outline', 'btn-primary');
+          btn.classList.add('btn-ghost');
+        }
+      }
+    });
+  });
+}, {
+  root: null,
+  threshold: 0.6
+});
+
+sections.forEach(section => {
+  if (section) observer.observe(section);
+});
+
+// 🤓 click = scroll smooth
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.querySelector(btn.dataset.target);
+    if (target) {
+      const offset = -112; // tipo -3rem (3 * 16px)
+      const y = target.getBoundingClientRect().top + window.scrollY + offset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  });
 });
