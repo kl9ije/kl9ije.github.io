@@ -81,9 +81,7 @@ async function updateStatus() {
 
     activityCard.style.display = "flex";
 
-    // spotify attivo
     if (spotify) {
-      // reset gioco
       activityData = null;
       oldActivityId = null;
 
@@ -109,7 +107,6 @@ async function updateStatus() {
       content += ` listening Spotify`;
 
     } else if (game) {
-      // reset spotify
       spotifyData = null;
       oldId = null;
 
@@ -136,7 +133,6 @@ async function updateStatus() {
       content += ` playing ${game.name}`;
 
     } else {
-      // niente spotify né gioco
       spotifyData = null;
       activityData = null;
       oldId = null;
@@ -467,7 +463,7 @@ const sections = Array.from(buttons).map(btn => document.querySelector(btn.datas
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.6 // quando 60% della sezione è visibile
+  threshold: 0.6
 };
 
 function fadeOutIn(element, callback) {
@@ -475,7 +471,7 @@ function fadeOutIn(element, callback) {
   element.style.opacity = '0';
 
   setTimeout(() => {
-    callback(); // cambia classi
+    callback();
     element.style.opacity = '1';
   }, 300);
 }
@@ -507,12 +503,11 @@ sections.forEach(section => {
   if (section) observer.observe(section);
 });
 
-// 🤓 click = scroll smooth
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     const target = document.querySelector(btn.dataset.target);
     if (target) {
-      const offset = -112; // tipo -3rem (3 * 16px)
+      const offset = -112;
       const y = target.getBoundingClientRect().top + window.scrollY + offset;
 
       window.scrollTo({ top: y, behavior: 'smooth' });
