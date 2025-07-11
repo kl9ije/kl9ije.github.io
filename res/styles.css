@@ -201,12 +201,10 @@
     margin: 0.5rem;
 }
 
-/* nasconde icona quando espanso */
 .mobile-status.expanded .mobile-status-icon {
   display: none;
 }
 
-/* mostra contenuto quando espanso */
 .mobile-status.expanded .mobile-status-content {
   display: block !important;
 }
@@ -787,7 +785,7 @@ span.loading.loading-spinner {
 .graph {
   display: grid;
   grid-template-columns: repeat(53, 1fr);
-  gap: 3px;
+  gap: 4px;
   margin-top: 1rem;
 }
 
@@ -799,11 +797,18 @@ span.loading.loading-spinner {
   position: relative;
 }
 
-/* Color levels */
 .graph-day[data-level="1"] { background-color: #2e3366; }
 .graph-day[data-level="2"] { background-color: #464d99; }
 .graph-day[data-level="3"] { background-color: #5d66cc; }
 .graph-day[data-level="4"] { background-color: #7480ff; }
+
+.legend {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	width: -moz-available;
+    width: -webkit-fill-available;
+}
 
 .pinnedprojects {
 	display: inherit;
