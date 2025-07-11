@@ -10,7 +10,7 @@
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kl9ije" data-description="Support me on Buy me a coffee!" data-message="" data-color="#7480ff" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="res/styles.css">
+    <link rel="stylesheet" href="res/styles.css?v=3">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div class="right">
-            <a class="social btn btn-primary" href="#myprojects" style="margin: 0; margin-top: 1rem;">My Projects</a>
+            <button class="social btn btn-primary" data-target="#myprojects" id="myprojects-me" style="margin: 0; margin-top: 1rem;">My Projects</button>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
             <p style="margin: 0" id="state">loading...</p>
             <div style="display: flex; align-items: center; margin-top: -0.5rem;" id="progress">
               <progress class="progress progress-primary" id="timebar"></progress>
-              <p style="margin: 0; margin-left: 1rem; width: 10rem !important; font-family: 'JetBrains Mono', monospace; font-weight: bold; color: #7480ff;" id="time">-:-- / -:--</p>
+              <p class="clock" style="margin: 0; margin-left: 1rem; width: 10rem; font-family: 'JetBrains Mono', monospace; font-weight: bold; color: #7480ff;" id="time">-:-- / -:--</p>
             </div>
           </div>
         </div>
@@ -261,6 +261,6 @@
     </section>
   </div>
 
-  <script src="/res/script.js"></script>
+  <script src="/res/script.js?v=2"></script>
 </body>
 </html>

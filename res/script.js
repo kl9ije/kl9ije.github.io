@@ -458,6 +458,7 @@ window.addEventListener("load", () => {
 });
 
 const buttons = document.querySelectorAll('.navbar-center button');
+const intr = document.querySelectorAll('.introduction button');
 const sections = Array.from(buttons).map(btn => document.querySelector(btn.dataset.target));
 
 const options = {
@@ -504,6 +505,18 @@ sections.forEach(section => {
 });
 
 buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.querySelector(btn.dataset.target);
+    if (target) {
+      const offset = -112;
+      const y = target.getBoundingClientRect().top + window.scrollY + offset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  });
+});
+
+intr.forEach(btn => {
   btn.addEventListener('click', () => {
     const target = document.querySelector(btn.dataset.target);
     if (target) {
