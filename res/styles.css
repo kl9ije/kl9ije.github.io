@@ -1,3 +1,34 @@
+/* Effetto combinato animate-btt + fadeblur */
+/* Effetto combinato animate-btt + fadeblur: tutte le proprietà transizionano insieme */
+.animate-btt.fadeblur,
+.animate-btt.fadeblur.show,
+.animate-btt,
+.animate-btt.show,
+.fadeblur,
+.fadeblur.show {
+  transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease;
+}
+
+.animate-btt.fadeblur {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(30px);
+}
+.animate-btt.fadeblur.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+/* FadeBlur: da usare insieme a animate-ttb, animate-btt, ecc. */
+.fadeblur {
+  filter: blur(10px);
+  opacity: 0;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+.fadeblur.show {
+  filter: blur(0px);
+  opacity: 1;
+}
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap');
 
 .animate-ttb,
@@ -78,10 +109,10 @@
 }
 
 .typewriter {
-	margin: 0;
-	font-size: 2rem;
-	font-weight: bold;
-	text-align: start;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: start;
 }
 
 #typewriter-caret {
@@ -119,6 +150,10 @@
   90% { transform: rotate(-10deg); }
 }
 
+.card-title {
+    line-height: inherit;
+}
+
 .wave {
   display: inline-block;
   transform-origin: 70% 70%;
@@ -126,15 +161,15 @@
 
 
 .main-row {
-	display: flex;
-	flex-direction: row;
-	align-items: stretch;
-	gap: 2rem;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	width: 60rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 60rem;
 }
 
 .main-row > .stats,
@@ -147,6 +182,11 @@
 
 .introduction .card-body {
     margin: 2rem;
+}
+
+#activity-card {
+    width: 40rem !important;
+    margin-top: 1.5rem;
 }
 
 .card-body {
@@ -333,12 +373,12 @@ html {
 }
 
 .navbar-start img {
-	height: 2.75rem;
-	margin-left: 0.5rem;
+    height: 2.75rem;
+    margin-left: 0.5rem;
 }
 
 .navbar-center .btn {
-	margin: 0 !important;
+    margin: 0 !important;
 }
 
 ul.menu.menu-sm.dropdown-content {
@@ -367,12 +407,12 @@ ul.menu.menu-sm.dropdown-content {
 }
 
 .socials .social svg {
-	height: 3.5rem;
-	background-color: rgba(48, 48, 60, 0.5);
-	border: 1px solid hsla(0, 0%, 100%, 0.075);
-	border-radius: 8px;
-	padding: 0.5rem;
-	fill: rgba(96, 96, 96);
+    height: 3rem;
+    background-color: rgba(48, 48, 60, 0.5);
+    border: 1px solid hsla(0, 0%, 100%, 0.075);
+    border-radius: 8px;
+    padding: 0.5rem;
+    fill: rgba(96, 96, 96);
 }
 
 .chat.chat-start {
@@ -748,10 +788,10 @@ span.loading.loading-spinner {
 }
 
 .item {
-	background-color: rgba(28,28,30,.5);
-	border: 1px solid hsla(0,0%,100%,.075);
-	padding: 1rem;
-	border-radius: 12px;
+    background-color: rgba(28,28,30,.5);
+    border: 1px solid hsla(0,0%,100%,.075);
+    padding: 1rem;
+    border-radius: 12px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: block;
@@ -776,8 +816,8 @@ span.loading.loading-spinner {
 }
 
 .projects .item {
-	width: fit-content;
-	display: inline-block;
+    width: fit-content;
+    display: inline-block;
     margin-top: 1rem;
     margin-right: 1rem;
 }
@@ -835,16 +875,16 @@ span.loading.loading-spinner {
 .graph-day[data-level="4"] { background-color: #7480ff; }
 
 .legend {
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	width: -moz-available;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: -moz-available;
     width: -webkit-fill-available;
 }
 
 .pinnedprojects {
-	display: inherit;
-	gap: 2rem;
+    display: inherit;
+    gap: 2rem;
 }
 
 .pinnedprojects .item {
@@ -872,20 +912,20 @@ span.loading.loading-spinner {
 }
 
 .projectstats {
-	display: inline-flex;
+    display: inline-flex;
     margin-top: 1rem;
 }
 
 .projectstats p {
-	width: fit-content;
+    width: fit-content;
     margin-right: 0.5rem;
 }
 
 .pinnedprojects .item a {
-	margin: 0;
-	margin-top: 1rem;
-	margin-bottom: 0.5rem;
-	width: inherit;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    width: inherit;
 }
 
 /* CSS per i dispositivi col tema impostato sul chiaro */

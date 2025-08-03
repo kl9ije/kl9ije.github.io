@@ -32,7 +32,7 @@
   <div class="wrapper">
     <div class="navbar bg-base-100 fixed animate-ttb">
       <div class="navbar-start">
-        <img src="https://images.guns.lol/YFqD7.png">
+        <a class="btn btn-ghost" style="font-size: 1.5rem; font-weight: bolder;">kl9ije.dev<span class="badge-accent" style="width: 0.75rem; height: 0.75rem; border-radius: 100%;"></span></a>
       </div>
       <div class="navbar-center">
         <button data-target="#aboutme" class="btn btn-sm btn-ghost" id="aboutme-nvb">About Me</button>
@@ -50,9 +50,9 @@
 
   <h1 style="padding-bottom: 10rem;"></h1>
   <div class="main-content">
-    <div class="card cool-card centered animate-btt introduction">
+    <div class="card cool-card centered animate-btt introduction fadeblur">
       <div class="card-body">
-        <h1 class="card-title" style="margin: 0; font-size: 4.5rem; font-weight: bold;">Hey, i'm <span class="gradient-text" style="height: 6rem; padding-top: 2.13rem;">kl9ije</span>!<div class="wave">👋</div></h1>
+        <h1 class="card-title" style="margin: 0; font-size: 2.5rem; font-weight: bold;">Hey, i'm <span class="gradient-text">kl9ije</span>!<div class="wave">👋</div></h1>
         <p class="typewriter">I'm a silly 17 years old dev located in Italy<span id="typewriter-caret">|</span></p>
         <div class="intestation" style="margin-bottom: 0.75rem;">
           <div class="left">
@@ -73,9 +73,9 @@
     </div>
 
     <section id="aboutme">
-      <h2 class="animate-ttb">About me</h2>
+      <h2 class="animate-ttb fadeblur">About me</h2>
 
-      <div class="card cool-card centered animate-ttb">
+      <div class="card cool-card centered animate-ttb fadeblur">
         <div class="card-body">
           <h2>Who am i?</h2>
           <p>I am an Italian kid and I like programming in Python, HTML and many other languages. Also, I can create Discord Bots, Android Apps and iOS mods. I started to get interested in computers only at the age of 9 and I started writing my first code when I was 13. It was a very ugly website, so since then I have learned a lot and now I am very good.</p>
@@ -138,22 +138,11 @@
             </div>
           </div>
         </div>
-        <div class="card cool-card centered animate-scroll-btt" id="activity-card" style="display: none;">
-          <div class="card-body" style="height: 12.43rem;">
-            <h3 id="activity" style="margin: 0; width: 100%; text-align: center; margin-top: 0.5rem !important;">loading...<span style="margin-left: 0.5rem;"></span></h3>
-            <h2 id="details" style="font-size: 1.5rem;">loading...</h2>
-            <p style="margin: 0" id="state">loading...</p>
-            <div style="display: flex; align-items: center; margin-top: -0.5rem;" id="progress">
-              <progress class="progress progress-primary" id="timebar"></progress>
-              <p class="clock" style="margin: 0; margin-left: 1rem; width: 10rem; font-family: 'JetBrains Mono', monospace; font-weight: bold; color: #7480ff;" id="time">-:-- / -:--</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <section id="myexperience">
-      <h2 class="animate-scroll-ttb" id="myexperience">My experience</h2>
+      <h2 class="animate-scroll-ttb fadeblur" id="myexperience">My experience</h2>
       <div class="main-row" style="margin-top: 2rem;">
         <div class="card cool-card centered animate-scroll-ltr toplangs" style="max-width: 20rem;">
           <div class="card-body" style="margin-left: 2rem; margin-right: 2rem;">
@@ -252,7 +241,7 @@
     </section>
 
     <section id="myprojects">
-      <h2 id="myprojects" class="animate-scroll-ttb">My Projects</h2>
+      <h2 id="myprojects" class="animate-scroll-ttb fadeblur">My Projects</h2>
       <div class="card cool-card centered">
         <div class="card-body">
           <div class="pinnedprojects">
@@ -290,5 +279,7 @@
   </div>
 
   <script src="/res/script.js?v=4"></script>
+  <script src="/res/scripts/animations.js?v=1"></script>
+  <script src="/res/scripts/github.js?v=1"></script>
 </body>
 </html>
